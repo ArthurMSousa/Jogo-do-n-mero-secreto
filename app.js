@@ -2,20 +2,20 @@ alert('Boas vindas ao jogo do número secreto');
 let maxNumber = 5000
 let secretNumber = parseInt(Math.random() * maxNumber + 1);
 console.log(secretNumber);
-let bet;
+let guess;
 let attempts = 1; 
 
 //ENQUANTO o chute não for igual ao número secreto
-while (bet != secretNumber) {
-    bet = prompt(`Digite um número entre 1 e ${maxNumber}`); 
+while (guess != secretNumber) {
+    guess = prompt(`Digite um número entre 1 e ${maxNumber}`); 
 // SE o chute for igual ao número secreto
-    if (bet == secretNumber) {
+    if (guess == secretNumber) {
         break;
             } else {
-        if (bet > secretNumber) {
-            alert(`O número secreto é menor que ${bet}`);
+        if (guess > secretNumber) {
+            alert(`O número secreto é menor que ${guess}`);
         } else {
-            alert(`O número secreto é maior que ${bet}`);
+            alert(`O número secreto é maior que ${guess}`);
         }
         // Calcular tentativas: attempts = attempts + 1; ou 
         attempts++;
